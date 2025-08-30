@@ -26,5 +26,5 @@ jobs:
 
       - name: Run script
         run: |
-          echo "Hello CI/CD"
+          echo "Hello CI/CD!"
           python -c "print('CEEEG pipeline test success!')"
