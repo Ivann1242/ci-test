@@ -3,11 +3,11 @@ name: CI Demo
 on:
   push:
     branches:
-      -main
+      - main
   pull_request:
 
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,16 +15,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/ setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirement.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run script
         run: |
           echo "Hello CI/CD!"
-          python -c "print('CEEEG pipeline test success!')"
+          python -c "print('CEEG pipeline test success!')"
